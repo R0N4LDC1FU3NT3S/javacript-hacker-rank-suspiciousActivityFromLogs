@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main-splitpane-left" class="coding-question__left-pane"><section class="question-view__title-wrapper"><h1 class="question-view__title">4. Suspicious Activity From Logs</h1></section><section class="question-view__instruction"><div class="candidate-rich-text"><div id="ebcf04prnhl-instruction"><style type="text/css"><p><em>1 &le; |source| &le; 10^6 </em></p>.ps-content-wrapper-v0 div { margin: 0 auto; overflow: auto; } .ps-content-wrapper-v0 div.preheader { display: none; } .ps-content-wrapper-v0 p { white-space: pre-wrap; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; } .ps-content-wrapper-v0 p.section-title { font-weight: bold; padding-bottom: 0px; } .ps-content-wrapper-v0 ol.plain-list, .ps-content-wrapper-v0 ul.plain-list { list-style-type: none; padding: 4px; } .ps-content-wrapper-v0 li { white-space: normal; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 code { color: black; } .ps-content-wrapper-v0 pre { background-color: #f4faff; border: 0; border-radius: 2px; margin: 8px; padding: 10px; } .ps-content-wrapper-v0 figure { background-color: transparent; display: table; margin-top: 8px; margin-bottom: 8px; text-align: center; margin-left: auto; margin-right: auto; } .ps-content-wrapper-v0 figcaption { text-align: center; display: table-caption; caption-side: bottom; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 img { width: auto; max-width: 100%; height: auto; } .ps-content-wrapper-v0 details { background-color: transparent; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; } .ps-content-wrapper-v0 details summary { background-color: #39424e; color: white; font-weight: bold; margin-top: 4px; margin-bottom: 4px; padding: 8px; } .ps-content-wrapper-v0 details div.collapsable-details { margin: 0 auto; padding-left: 4px; padding-right: 4px; padding-top: 0px; padding-bottom: 2px; overflow: auto; } .ps-content-wrapper-v0 details div.collapsable-details pre { margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; } .ps-content-wrapper-v0 table { border: 1px solid black; border-collapse: collapse; border-color: darkgray; margin: 0 auto; margin-top: 8px; margin-bottom: 8px; padding: 8px; width: 96%; table-layout: fixed; } .ps-content-wrapper-v0 table tbody tr th, .ps-content-wrapper-v0 table tbody tr td { font-weight: bold; white-space: nowrap; text-align: center; vertical-align: middle; border: 1px solid black; border-color: darkgray; padding: 8px; } .ps-content-wrapper-v0 table tbody tr th.description { width: 60%; } .ps-content-wrapper-v0 table tbody tr td { font-weight: normal; white-space: normal; } .ps-content-wrapper-v0 table.function-params tbody tr:first-child td.headers { border-bottom-width: 2px; } .ps-content-wrapper-v0 table.function-params tbody tr:last-child td { border-top-width: 2px; border-top-color: darkgray; } .ps-content-wrapper-v0 table.function-params tbody tr td.headers { width: 25%; font-weight: bold; text-align: center; border: 1px solid black; border-right-width: 2px; border-color: darkgray; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell { width: 100%; height: 100%; padding: 0px; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table { width: 100%; height: 100%; padding: 0px; margin: 0px; border: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td.code { white-space: normal; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th { border-top: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:first-child { border-left: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:last-child { border-right: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr:last-child td { border-bottom: 0; border-top-width: 1px; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:first-child { border-left: 0; } .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:last-child { border-right: 0; } .ps-content-wrapper-v0 .left { text-align: left; } .ps-content-wrapper-v0 .right { text-align: right; } .ps-content-wrapper-v0 .code { font-family: monospace; white-space: nowrap; } .ps-content-wrapper-v0 .json-object-array ol, .ps-content-wrapper-v0 .json-object-array ol ul { margin-top: 0px; padding-left: 14px; } .json-object-array li { float: left; margin-right: 30px; margin-left: 10px; } .json-object-array pre { padding: 4px; margin-left: 0px; }
+</style>
+<div class="ps-content-wrapper-v0">
+<p>Application logs are useful in analyzing interaction with an application and may also be used to detect suspicious activities.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>A log file is provided as a string array where each entry represents a money transfer in the form "<em>sender_user_id recipient_user_id amount</em>". Each of the values is separated by a space.</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;s<em>ender_user_id</em>&nbsp;and <em>recipient_user_id</em>&nbsp;both consist&nbsp;only of digits, are&nbsp;at most 9 digits long and start&nbsp;with non-zero digit</li>
+	<li>&nbsp;&nbsp;&nbsp;&nbsp;<em>amount</em>&nbsp;consists only of digits, is at most 9 digits long and starts with non-zero digit</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>Logs are given in no particular order.&nbsp; Write a function that returns an array of strings denoting user_id's of suspicious users who were involved in at least <em>threshold</em> number of log entries. The id's should be ordered ascending by numeric value.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Example</strong></p>
+
+<p><em>logs = ["88 99 200",&nbsp;"88 99&nbsp;300",&nbsp;"99 32 100",&nbsp;" 12 12&nbsp;15"]</em></p>
+
+<p><em>threshold = 2</em></p>
+
+<p>&nbsp;</p>
+
+<p>The transactions count for each user, regardless of role are:</p>
+
+<pre>ID     Transactions
+--&nbsp;&nbsp;&nbsp;&nbsp; ------------
+99 &nbsp;&nbsp;&nbsp;&nbsp;3
+88 &nbsp;&nbsp;&nbsp;&nbsp;2
+12 &nbsp;&nbsp;&nbsp;&nbsp;1
+32&nbsp;&nbsp;&nbsp;&nbsp; 1
+</pre>
+
+<p>There are two users with at least&nbsp;<em>threshold = 2</em>&nbsp;transactions:&nbsp;<em>99</em>&nbsp;and&nbsp;<em>88.</em>&nbsp; In ascending order, the return array is&nbsp;<em>['88', '99'].</em></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Note:<em>&nbsp; </em></strong>In the last log entry, user <em>12</em>&nbsp;was on both sides of the transaction. This counts as only <em>1</em>&nbsp;transaction for user <em>12</em>.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Function Description </strong></p>
+
+<p>Complete the function <em>processLogs</em> in the editor below.</p>
+
+<p>&nbsp;</p>
+
+<p>The function has the following parameter(s):</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;string <em>logs[n]</em>: each <em>logs[i]</em> denotes the i<sup>th</sup> entry in the logs</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;int <em>threshold</em>: the minimum number of transactions that a user must have to be included in the result</p>
+
+<p>Returns:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<em>string[]:</em> an array of user id's as strings, sorted ascending by numeric value</p>
+
+<p>&nbsp;</p>
+
+<p class="section-title">Constraints</p>
+
+<ul>
+	<li>1 ≤ <em>n</em>&nbsp;≤ 10<sup>5</sup>
+</li>
+	<li>1 ≤ <em>threshold</em> ≤ n</li>
+	<li>
+	<p>The <em>sender_user_id, recipient_user_id</em> and <em>amount</em> contain only characters in the range ascii['0'-'9'].</p>
+	</li>
+	<li>
+	<p>The <em>sender_user_id, recipient_user_id</em> and <em>amount</em> start with a non-zero digit.</p>
+	</li>
+	<li>0 &lt; length of <em>sender_user_id, recipient_user_id, amount</em>&nbsp;≤ 9.</li>
+	<li>
+	<p>The result will contain at least one element.</p>
+	</li>
+</ul>
+<!--       <StartOfInputFormat> DO NOT REMOVE THIS LINE-->
+
+<details open=""><summary class="section-title">Input Format Format for Custom Testing</summary>
+
+<div class="collapsable-details">
+<p>Input from stdin will be processed as follows and passed to the function<em>.</em></p>
+
+<p>&nbsp;</p>
+
+<p>The first line contains the integer,<em> n,</em>&nbsp;the size of <em>logs</em>.</p>
+
+<p>The following <em>n</em>&nbsp;lines contain a string, <em>logs[i]</em>.</p>
+
+<p>The last line contains an integer, <em>threshold.</em></p>
+</div>
+</details>
+<!--        </StartOfInputFormat> DO NOT REMOVE THIS LINE-->
+
+<details open=""><summary class="section-title">Sample Case 0</summary>
+
+<div class="collapsable-details">
+<p class="section-title">Sample Input</p>
+
+<pre>STDIN&nbsp;&nbsp;&nbsp;&nbsp;Function
+-----&nbsp;&nbsp;&nbsp;&nbsp;--------
+4&nbsp;&nbsp;&nbsp;&nbsp;  →&nbsp;logs[] size n = 4
+1 2 50&nbsp;→&nbsp;logs = ["1 2 50", "1 7 70", "1 3 20", "2 2 17"]
+1 7 70
+1 3 20
+2 2 17
+2&nbsp;&nbsp;&nbsp;&nbsp;  →&nbsp;threshold = 2</pre>
+
+<p>&nbsp;</p>
+
+<p class="section-title">Sample Output</p>
+
+<pre>1
+2
+</pre>
+
+<p>&nbsp;</p>
+
+<p class="section-title">Explanation</p>
+
+<pre>ID     Transactions
+--&nbsp;&nbsp;&nbsp;&nbsp; ------------
+1&nbsp;&nbsp;&nbsp;&nbsp;  3
+2 &nbsp;&nbsp;&nbsp;&nbsp; 2
+7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+
+</pre>
+
+<p>Only users <em>1</em>&nbsp;and <em>2</em>&nbsp;have at least <em>threshold = 2</em>&nbsp;transactions. The return array in numerically ascending order is <em>["1", "2"]</em>. Note that in the last log entry, the user with id 2 performed both roles in the transaction. This is counted as one transaction for the user.</p>
+
+<p>&nbsp;</p>
+</div>
+</details>
+
+<details open=""><summary class="section-title">Sample Case 1</summary>
+
+<div class="collapsable-details">
+<p class="section-title">Sample Input</p>
+
+<pre>STDIN&nbsp;&nbsp;&nbsp;&nbsp;Function
+-----&nbsp;&nbsp;&nbsp;&nbsp;--------
+4&nbsp;&nbsp;&nbsp;&nbsp;  →&nbsp;logs[] size n = 4
+9 7 50&nbsp;→&nbsp;logs = ["9 7 50", "22 7 20", "33 7 50", "22 7 30"]
+22 7 20
+33 7 50
+22 7 30
+3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→&nbsp;threshold = 3</pre>
+
+<p>&nbsp;</p>
+
+<p class="section-title">Sample Output</p>
+
+<pre>7</pre>
+
+<p>&nbsp;</p>
+
+<p class="section-title">Explanation</p>
+
+<pre>ID     Transactions
+--&nbsp;&nbsp;&nbsp;&nbsp; ------------
+9  &nbsp;&nbsp;&nbsp;&nbsp;1
+7  &nbsp;&nbsp;&nbsp;&nbsp;4
+22 &nbsp;&nbsp;&nbsp;&nbsp;2
+33 &nbsp;&nbsp;&nbsp;&nbsp;1
+</pre>
+
+<p>&nbsp;</p>
+
+<p>Only user <em>7</em>&nbsp;has <em>3</em>&nbsp;or more transactions. The return array is <em>["7"].</em></p>
+</div>
+</details>
+</div>
+</div></div></section></div>
+</body>
+</html>
+
+<!-- 'use strict';
+
+const fs = require('fs');
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', function(inputStdin) {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', function() {
+    inputString = inputString.split('\n');
+
+    main();
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+
+
+/*
+ * Complete the 'processLogs' function below.
+ *
+ * The function is expected to return a STRING_ARRAY.
+ * The function accepts following parameters:
+ *  1. STRING_ARRAY logs
+ *  2. INTEGER threshold
+ */
+
+function processLogs(logs, threshold) {
+    // Write your code here
+
+}
+
+function main() {
+    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+
+    const logsCount = parseInt(readLine().trim(), 10);
+
+    let logs = [];
+
+    for (let i = 0; i < logsCount; i++) {
+        const logsItem = readLine();
+        logs.push(logsItem);
+    }
+
+    const threshold = parseInt(readLine().trim(), 10);
+
+    const result = processLogs(logs, threshold);
+
+    ws.write(result.join('\n') + '\n');
+
+    ws.end();
+} -->
